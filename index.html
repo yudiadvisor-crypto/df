@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Global Tiket</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <div class="app">
+    <aside class="sidebar">
+      <div class="brand">
+        <i data-lucide="earth"></i>
+        <div>
+          <strong>Global Tiket</strong>
+          <span>Travel ERP</span>
+        </div>
+      </div>
+
+      <nav>
+        <a class="active" href="#"><i data-lucide="layout-dashboard"></i> Dashboard</a>
+        <a href="#"><i data-lucide="ticket"></i> Tiket Travel</a>
+        <a href="#"><i data-lucide="bus"></i> PO Travel</a>
+        <a href="#"><i data-lucide="users"></i> Customer</a>
+        <a href="#"><i data-lucide="wallet"></i> Keuangan</a>
+      </nav>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1>Dashboard</h1>
+          <p>Preview tampilan Global Tiket di GitHub Pages</p>
+        </div>
+
+        <button class="btn">
+          <i data-lucide="plus"></i>
+          Booking Baru
+        </button>
+      </header>
+
+      <section class="content">
+        <div class="card">
+          <i data-lucide="ticket"></i>
+          <h2>Tiket Hari Ini</h2>
+          <strong>128</strong>
+        </div>
+
+        <div class="card">
+          <i data-lucide="wallet"></i>
+          <h2>Pendapatan</h2>
+          <strong>Rp 12.500.000</strong>
+        </div>
+
+        <div class="card">
+          <i data-lucide="bus"></i>
+          <h2>Jadwal Aktif</h2>
+          <strong>24</strong>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
