@@ -1,0 +1,167 @@
+:root {
+  --primary: #C0392B;
+  --primary-dark: #A93226;
+  --primary-bg: #FDEDEC;
+  --white: #FFFFFF;
+  --bg: #F8FAFC;
+  --border: #E5E7EB;
+  --text: #111827;
+  --muted: #6B7280;
+  --font: 'Poppins', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 270px;
+  background: linear-gradient(180deg, #8C0001 0%, #A71E17 50%, #C23A2C 100%);
+  padding: 16px 12px;
+  color: var(--white);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 10px 20px;
+}
+
+.brand svg {
+  width: 34px;
+  height: 34px;
+}
+
+.brand span {
+  display: block;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+nav a {
+  min-height: 42px;
+  border-radius: 12px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.82);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+nav a.active,
+nav a:hover {
+  background: var(--white);
+  color: var(--primary-dark);
+}
+
+nav svg {
+  width: 18px;
+  height: 18px;
+}
+
+.main {
+  flex: 1;
+}
+
+.topbar {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.topbar h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.topbar p {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.btn {
+  min-height: 42px;
+  border: 0;
+  border-radius: 12px;
+  background: var(--primary);
+  color: var(--white);
+  padding: 0 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.content {
+  padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.06);
+}
+
+.card svg {
+  width: 26px;
+  height: 26px;
+  color: var(--primary);
+}
+
+.card h2 {
+  margin: 14px 0 8px;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.card strong {
+  font-size: 24px;
+}
+
+@media (max-width: 768px) {
+  .app {
+    display: block;
+  }
+
+  .sidebar {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+  }
+}
